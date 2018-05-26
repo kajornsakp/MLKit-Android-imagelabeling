@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/chooseImageFragment">
+
+    <fragment
+        android:id="@+id/chooseImageFragment"
+        android:name="com.example.kajornsakp.firebaseplayground.ui.chooseimage.ChooseImage"
+        android:label="choose_image_fragment"
+        tools:layout="@layout/choose_image_fragment">
+        <action
+            android:id="@+id/action_chooseImageFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.kajornsakp.firebaseplayground.ui.result.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result">
+        <argument
+            android:name="uri"
+            app:type="string" />
+        <argument
+            android:name="output"
+            app:type="string" />
+    </fragment>
+</navigation>
